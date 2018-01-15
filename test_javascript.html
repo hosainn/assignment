@@ -1,0 +1,50 @@
+<!Doctype html>
+<htm>
+	<head>
+		
+	</head>
+	<body>
+		<img src="1.jpg" id ="oneimage">
+		<img src="2.jpeg" id ="twoimage">
+		<img src="3.jpeg" id ="threeimage">
+		<img src="4.jpeg" id ="fourimage">
+	 
+		 
+		<script type="text/javascript">
+			var one = document.getElementById('oneimage');
+			var two = document.getElementById('twoimage');
+			var three = document.getElementById('threeimage');
+			var four = document.getElementById('fourimage');
+			 
+			var imageArray = ["1.jpg","2.jpeg","3.jpeg","4.jpeg"];
+			var oneindex = 1;
+			var twoindex = 2;
+			var threeindex =3;
+			var fourindex = 0;
+
+			function changeImage(){
+				one.setAttribute("src",imageArray[oneindex]);
+				two.setAttribute("src",imageArray[twoindex]);
+				three.setAttribute("src",imageArray[threeindex]);
+				four.setAttribute("src",imageArray[fourindex]);
+				oneindex++;
+				twoindex++;
+				threeindex++;
+				fourindex++;
+
+				if (oneindex>3)
+					{ oneindex = 0;}
+				if (twoindex>3)
+					{twoindex=0;}
+				if (threeindex>3)
+					{ threeindex=0;}
+				if (fourindex>3)
+					{ fourindex=0;}
+
+			}
+		</script>
+		<button onclick="changeImage()">next</button>
+	</body
+     
+
+</htm>
